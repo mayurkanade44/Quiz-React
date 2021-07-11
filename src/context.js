@@ -75,6 +75,7 @@ const AppProvider = ({ children }) => {
   };
   const closeModal = () => {
     setWaiting(true);
+    localStorage.setItem("score", correct);
     setCorrect(0);
     setModalOpen(false);
   };
@@ -88,6 +89,7 @@ const AppProvider = ({ children }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { amount, category, difficulty } = quiz;
+    localStorage.setItem("category", category);
 
     const url = `${API_ENDPOINT}amount=${amount}&difficulty=${difficulty}&category=${table[category]}&type=multiple`;
     fetchQuestions(url);

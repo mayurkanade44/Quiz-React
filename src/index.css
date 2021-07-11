@@ -252,6 +252,10 @@ Form
   width: 100%;
   margin-top: 3rem;
 }
+
+.last-score {
+  margin-bottom: 30px;
+}
 /*
 =============== 
 Loading

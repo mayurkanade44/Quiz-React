@@ -8,6 +8,11 @@ const SetupForm = () => {
     <main>
       <section className="quiz quiz-small">
         <form className="setup-from">
+          { localStorage.getItem("score") ? (
+          <h4 className="last-score">
+            Your last score was <span style={{color:"red"}}>{localStorage.getItem("score")}</span> in{" "}
+            {localStorage.getItem("category")}
+          </h4>):null}
           <h2>Setup Quiz</h2>
           {/* {amount} */}
           <div className="form-control">
